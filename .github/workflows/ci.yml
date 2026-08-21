@@ -24,8 +24,8 @@ jobs:
         run: xcrun simctl list devices available
 
       - name: Build
-  	    run: |
-    	  xcodebuild \
+        run: |
+          xcodebuild \
             -project ProductExplorer.xcodeproj \
             -scheme ProductExplorer \
             -sdk iphonesimulator \
@@ -39,4 +39,3 @@ jobs:
             -scheme ProductExplorer \
             -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=26.1' \
             test
-
