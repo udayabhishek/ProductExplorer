@@ -16,6 +16,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+        
+      - name: Install SwiftLint
+        run: brew install swiftLint
+        
+      - name: SwiftLint
+        run: swiftlint lint --strict
 
       - name: Show Xcode version
         run: xcodebuild -version

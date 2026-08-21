@@ -1,0 +1,15 @@
+included:
+  - ProductExplorer
+
+excluded:
+  - ProductExplorerTests
+  - ProductExplorerUITests
+  - DerivedData
+  - build
+
+disabled_rules:
+  - trailing_whitespace
+
+line_length:
+  warning: 120
+  error: 150
