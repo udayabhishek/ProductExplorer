@@ -17,10 +17,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Show Xcode version
+        run: xcodebuild -version
+
+      - name: Show available simulators
+        run: xcrun simctl list devices available
+
       - name: Build and Test
         run: |
           xcodebuild \
             -project ProductExplorer.xcodeproj \
             -scheme ProductExplorer \
-            -destination 'platform=iOS Simulator,name=iPhone 17 Pro,OS=26.1' \
+            -sdk iphonesimulator \
+            -destination 'platform=iOS Simulator,name=iPhone 17' \
             test
