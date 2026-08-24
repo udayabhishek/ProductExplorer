@@ -73,7 +73,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ProductExplorer-TestResults
-          path: TestResults.xcresults
+          path: TestResults.xcresult
           if-no-files-found: error
           
       - name: Archive
